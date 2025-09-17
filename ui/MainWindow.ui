@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PCVMainWindow</class>
+ <widget class="QMainWindow" name="PCVMainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>PCVMainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0" columnstretch="1,1" columnminimumwidth="1,1">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>20</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>6</number>
+      </property>
+      <item row="5" column="1">
+       <widget class="QGraphicsView" name="graphicsView_2"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>873</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionBuka"/>
+    <addaction name="actionSimpan_Sebagai"/>
+    <addaction name="actionKeluar"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuHistogram">
+     <property name="title">
+      <string>Histogram</string>
+     </property>
+     <addaction name="actionInput"/>
+     <addaction name="actionOutput"/>
+     <addaction name="actionInput_Output"/>
+    </widget>
+    <addaction name="menuHistogram"/>
+   </widget>
+   <widget class="QMenu" name="menuColors">
+    <property name="title">
+     <string>Colors</string>
+    </property>
+    <widget class="QMenu" name="menuRGB">
+     <property name="title">
+      <string>RGB</string>
+     </property>
+     <addaction name="actionYellow"/>
+     <addaction name="actionOrange"/>
+     <addaction name="actionCyan"/>
+     <addaction name="actionPurple"/>
+     <addaction name="actionGrey"/>
+     <addaction name="actionBrown"/>
+     <addaction name="actionRed"/>
+    </widget>
+    <widget class="QMenu" name="menuBrightness">
+     <property name="title">
+      <string>Brightness</string>
+     </property>
+     <addaction name="actionContrast"/>
+    </widget>
+    <widget class="QMenu" name="menuRGB_to_Grayscale">
+     <property name="title">
+      <string>RGB to Grayscale</string>
+     </property>
+     <addaction name="actionAverage_2"/>
+     <addaction name="actionLightness_2"/>
+     <addaction name="actionLuminance_2"/>
+    </widget>
+    <widget class="QMenu" name="menuBit_Depth">
+     <property name="title">
+      <string>Bit Depth</string>
+     </property>
+     <addaction name="action1_bit"/>
+     <addaction name="action2_bit"/>
+     <addaction name="action3_bit"/>
+     <addaction name="action4_bit"/>
+     <addaction name="action5_bit"/>
+     <addaction name="action6_bit"/>
+     <addaction name="action7_bit"/>
+    </widget>
+    <addaction name="menuRGB"/>
+    <addaction name="menuRGB_to_Grayscale"/>
+    <addaction name="menuBrightness"/>
+    <addaction name="actionBrightness_Contrast"/>
+    <addaction name="actionInvers"/>
+    <addaction name="actionLog_Brightness"/>
+    <addaction name="menuBit_Depth"/>
+    <addaction name="actionGamma_Correction"/>
+   </widget>
+   <widget class="QMenu" name="menuTentang">
+    <property name="title">
+     <string>Tentang</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Processing">
+    <property name="title">
+     <string>Image Processing</string>
+    </property>
+    <addaction name="actionHistogram_Equalization"/>
+    <addaction name="actionFuzzy_HE_RGB"/>
+    <addaction name="actionFuzzy_Grayscale"/>
+   </widget>
+   <widget class="QMenu" name="menuAritmatical_Operation">
+    <property name="title">
+     <string>Aritmatical Operation</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFilter">
+    <property name="title">
+     <string>Filter</string>
+    </property>
+    <widget class="QMenu" name="menuEdge_Detection">
+     <property name="title">
+      <string>Edge Detection</string>
+     </property>
+     <addaction name="actionEdge_Detection_1"/>
+     <addaction name="actionEdge_Detection_2"/>
+     <addaction name="actionEdge_Detection_3"/>
+    </widget>
+    <widget class="QMenu" name="menuGaussian_Blur">
+     <property name="title">
+      <string>Gaussian Blur</string>
+     </property>
+     <addaction name="actionGaussian_Blur_3x3"/>
+     <addaction name="actionGaussian_Blur_5x5"/>
+    </widget>
+    <addaction name="actionIdentity"/>
+    <addaction name="menuEdge_Detection"/>
+    <addaction name="actionSharpen"/>
+    <addaction name="menuGaussian_Blur"/>
+    <addaction name="actionUnsharp_Masking"/>
+    <addaction name="actionAverage_Filter"/>
+    <addaction name="actionLow_Pass_Filter"/>
+    <addaction name="actionHight_Pass_Filter"/>
+    <addaction name="actionBandstop_Filter"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Detection_2">
+    <property name="title">
+     <string>Edge Detection</string>
+    </property>
+    <addaction name="actionPrewitt"/>
+    <addaction name="actionSobel"/>
+   </widget>
+   <widget class="QMenu" name="menuMorfologi">
+    <property name="title">
+     <string>Morfologi</string>
+    </property>
+    <widget class="QMenu" name="menuErosion">
+     <property name="title">
+      <string>Erosion</string>
+     </property>
+     <addaction name="actionSquare_3"/>
+     <addaction name="actionSquare_5"/>
+     <addaction name="actionCross_3"/>
+    </widget>
+    <widget class="QMenu" name="menuDilation">
+     <property name="title">
+      <string>Dilation</string>
+     </property>
+     <addaction name="actionSquare_4"/>
+     <addaction name="actionSquare_6"/>
+     <addaction name="actionCross_4"/>
+    </widget>
+    <widget class="QMenu" name="menuOpening">
+     <property name="title">
+      <string>Opening</string>
+     </property>
+     <addaction name="actionSquare_9"/>
+    </widget>
+    <widget class="QMenu" name="menuClosing">
+     <property name="title">
+      <string>Closing</string>
+     </property>
+     <addaction name="actionSquare_10"/>
+    </widget>
+    <addaction name="menuErosion"/>
+    <addaction name="menuDilation"/>
+    <addaction name="menuOpening"/>
+    <addaction name="menuClosing"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuColors"/>
+   <addaction name="menuTentang"/>
+   <addaction name="menuImage_Processing"/>
+   <addaction name="menuAritmatical_Operation"/>
+   <addaction name="menuFilter"/>
+   <addaction name="menuEdge_Detection_2"/>
+   <addaction name="menuMorfologi"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBuka">
+   <property name="text">
+    <string>Buka</string>
+   </property>
+  </action>
+  <action name="actionSimpan_Sebagai">
+   <property name="text">
+    <string>Simpan Sebagai...</string>
+   </property>
+  </action>
+  <action name="actionKeluar">
+   <property name="text">
+    <string>Keluar</string>
+   </property>
+  </action>
+  <action name="actionInput">
+   <property name="text">
+    <string>Input</string>
+   </property>
+  </action>
+  <action name="actionOutput">
+   <property name="text">
+    <string>Output</string>
+   </property>
+  </action>
+  <action name="actionInput_Output">
+   <property name="text">
+    <string>Input Output</string>
+   </property>
+  </action>
+  <action name="actionBrightness_Contrast">
+   <property name="text">
+    <string>Brightness - Contrast</string>
+   </property>
+  </action>
+  <action name="actionInvers">
+   <property name="text">
+    <string>Invers</string>
+   </property>
+  </action>
+  <action name="actionLog_Brightness">
+   <property name="text">
+    <string>Log Brightness</string>
+   </property>
+  </action>
+  <action name="actionGamma_Correction">
+   <property name="text">
+    <string>Gamma Correction</string>
+   </property>
+  </action>
+  <action name="actionYellow">
+   <property name="text">
+    <string>Yellow</string>
+   </property>
+  </action>
+  <action name="actionOrange">
+   <property name="text">
+    <string>Orange</string>
+   </property>
+  </action>
+  <action name="actionCyan">
+   <property name="text">
+    <string>Cyan</string>
+   </property>
+  </action>
+  <action name="actionPurple">
+   <property name="text">
+    <string>Purple</string>
+   </property>
+  </action>
+  <action name="actionGrey">
+   <property name="text">
+    <string>Grey</string>
+   </property>
+  </action>
+  <action name="actionBrown">
+   <property name="text">
+    <string>Brown</string>
+   </property>
+  </action>
+  <action name="actionRed">
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionAverage">
+   <property name="text">
+    <string>Average</string>
+   </property>
+  </action>
+  <action name="actionLightness">
+   <property name="text">
+    <string>Lightness</string>
+   </property>
+  </action>
+  <action name="actionLuminance">
+   <property name="text">
+    <string>Luminance</string>
+   </property>
+  </action>
+  <action name="actionAverage_2">
+   <property name="text">
+    <string>Average</string>
+   </property>
+  </action>
+  <action name="actionLightness_2">
+   <property name="text">
+    <string>Lightness</string>
+   </property>
+  </action>
+  <action name="actionLuminance_2">
+   <property name="text">
+    <string>Luminance</string>
+   </property>
+  </action>
+  <action name="actionContrast">
+   <property name="text">
+    <string>Contrast</string>
+   </property>
+  </action>
+  <action name="action1_bit">
+   <property name="text">
+    <string>1 bit</string>
+   </property>
+  </action>
+  <action name="action2_bit">
+   <property name="text">
+    <string>2 bit</string>
+   </property>
+  </action>
+  <action name="action3_bit">
+   <property name="text">
+    <string>3 bit</string>
+   </property>
+  </action>
+  <action name="action4_bit">
+   <property name="text">
+    <string>4 bit</string>
+   </property>
+  </action>
+  <action name="action5_bit">
+   <property name="text">
+    <string>5 bit</string>
+   </property>
+  </action>
+  <action name="action6_bit">
+   <property name="text">
+    <string>6 bit</string>
+   </property>
+  </action>
+  <action name="action7_bit">
+   <property name="text">
+    <string>7 bit</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Equalization">
+   <property name="text">
+    <string>Histogram Equalization</string>
+   </property>
+  </action>
+  <action name="actionFuzzy_HE_RGB">
+   <property name="text">
+    <string>Fuzzy HE RGB</string>
+   </property>
+  </action>
+  <action name="actionFuzzy_Grayscale">
+   <property name="text">
+    <string>Fuzzy Grayscale</string>
+   </property>
+  </action>
+  <action name="actionIdentity">
+   <property name="text">
+    <string>Identity</string>
+   </property>
+  </action>
+  <action name="actionSharpen">
+   <property name="text">
+    <string>Sharpen</string>
+   </property>
+  </action>
+  <action name="actionUnsharp_Masking">
+   <property name="text">
+    <string>Unsharp Masking</string>
+   </property>
+  </action>
+  <action name="actionAverage_Filter">
+   <property name="text">
+    <string>Average Filter</string>
+   </property>
+  </action>
+  <action name="actionLow_Pass_Filter">
+   <property name="text">
+    <string>Low Pass Filter</string>
+   </property>
+  </action>
+  <action name="actionHight_Pass_Filter">
+   <property name="text">
+    <string>Hight Pass Filter</string>
+   </property>
+  </action>
+  <action name="actionBandstop_Filter">
+   <property name="text">
+    <string>Bandstop Filter</string>
+   </property>
+  </action>
+  <action name="actionEdge_Detection_1">
+   <property name="text">
+    <string>Edge Detection 1</string>
+   </property>
+  </action>
+  <action name="actionEdge_Detection_2">
+   <property name="text">
+    <string>Edge Detection 2</string>
+   </property>
+  </action>
+  <action name="actionEdge_Detection_3">
+   <property name="text">
+    <string>Edge Detection 3</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Blur_3x3">
+   <property name="text">
+    <string>Gaussian Blur 3x3</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Blur_5x5">
+   <property name="text">
+    <string>Gaussian Blur 5x5</string>
+   </property>
+  </action>
+  <action name="actionPrewitt">
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+  </action>
+  <action name="actionSobel">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionSquare_3">
+   <property name="text">
+    <string>Square 3</string>
+   </property>
+  </action>
+  <action name="actionSquare_5">
+   <property name="text">
+    <string>Square 5</string>
+   </property>
+  </action>
+  <action name="actionCross_3">
+   <property name="text">
+    <string>Cross 3</string>
+   </property>
+  </action>
+  <action name="actionSquare_4">
+   <property name="text">
+    <string>Square 3</string>
+   </property>
+  </action>
+  <action name="actionSquare_6">
+   <property name="text">
+    <string>Square 5</string>
+   </property>
+  </action>
+  <action name="actionCross_4">
+   <property name="text">
+    <string>Cross 3</string>
+   </property>
+  </action>
+  <action name="actionSquare_9">
+   <property name="text">
+    <string>Square 9</string>
+   </property>
+  </action>
+  <action name="actionSquare_10">
+   <property name="text">
+    <string>Square 9</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
