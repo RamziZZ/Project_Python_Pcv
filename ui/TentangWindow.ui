@@ -55,7 +55,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Creator:Ramzi Farhan Pratama</string>
+    <string>Creator:Ramzi Farhan P</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
