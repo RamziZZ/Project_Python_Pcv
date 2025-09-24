@@ -1,6 +1,6 @@
 """
-Image enhancement operations for brightness, contrast, and other adjustments.
-This module contains all enhancement-related transformations.
+Operasi peningkatan gambar untuk kecerahan, kontras, dan penyesuaian lainnya.
+Modul ini berisi semua transformasi terkait peningkatan.
 """
 
 import numpy as np
