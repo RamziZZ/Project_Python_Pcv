@@ -1,6 +1,6 @@
 """
-Arithmetic operations for image processing.
-This module contains functions for basic arithmetic operations on images.
+Operasi aritmatika untuk pemrosesan gambar.
+Modul ini berisi fungsi-fungsi untuk operasi aritmatika dasar pada gambar.
 """
 
 import numpy as np

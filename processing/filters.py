@@ -1,6 +1,6 @@
 """
-Image filtering operations for image processing.
-This module contains all filter-related transformations including convolution-based filters.
+Operasi penyaringan gambar untuk pemrosesan gambar
+Modul ini berisi semua transformasi terkait filter, termasuk filter berbasis konvolusi.
 """
 
 import numpy as np
