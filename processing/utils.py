@@ -1,6 +1,6 @@
 """
-Utility functions for image processing operations.
-This module contains shared helper functions used across different processing modules.
+Fungsi utilitas untuk operasi pemrosesan gambar.
+Modul ini berisi fungsi bantuan bersama yang digunakan di berbagai modul pemrosesan.
 """
 
 import numpy as np
@@ -33,7 +33,7 @@ def _apply_color_tint(img: np.ndarray, r_factor: float = 1.0, g_factor: float = 
     """Apply color tint using optimized NumPy operations"""
     _ensure_numpy()
 
-    # Ensure image is float32 for calculations
+    # Pastikan gambar adalah float32 untuk perhitungan
     img_f = img.astype(np.float32)
 
     factors = np.array([r_factor, g_factor, b_factor])
@@ -43,5 +43,5 @@ def _apply_color_tint(img: np.ndarray, r_factor: float = 1.0, g_factor: float = 
     if bias != 0:
         tinted += bias
 
-    # Clip to valid range and convert back to uint8
+    # Clip rentang yang valid dan konversi kembali ke uint8
     return np.clip(tinted, 0, 255).astype(np.uint8)
